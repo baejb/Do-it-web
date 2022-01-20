@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>자리 배치도</title>
+  <style>
+    table, td{
+      border:1px solid #ccc;
+      border-collapse: collapse;
+    }
+    td{
+      padding: 5px;
+      font-size: 0.9em;
+    }
+  </style>
+
 </head>
 <body>
   <h1>자리 배치도</h1>
@@ -19,15 +30,17 @@
     //document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
     
     var i,j;
-
+    document.write("<table>");
     for(i=0;i<rowNum;i++){
+      document.write("<tr>");
       for(j=1;j<=colNum;j++){
         seatNo=i * colNum + j ;// 좌석번호 
         if(seatNo> memNum) break;
-        document.write("좌석 " + seatNo + " ");
+        document.write("<td>좌석 " + seatNo + "</td> ");
       }
-      document.write("<br>");
+      document.write("<tr>");
     }
+    document.write("</table>");
   </script>
 </body>
 </html>
