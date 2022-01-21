@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+</head>
+<body>
+	<script>
+		var num1 = parseInt(prompt("비교할 첫 번째 숫자"));
+		var num2 = parseInt(prompt("비교할 두 번째 숫자"));
+
+		function compareNum(x ,y ){
+			if(x > y){
+				document.write(x + "(이)가 "+ y + "보다 큽니다.");
+			}
+			else if(x < y){
+				document.write(y + "(이)가 "+ x + "보다 큽니다.");
+			}
+			else{
+				document.write("두 수가 같습니다.");
+			}
+		}
+		compareNum(num1,num2);
+	</script>
+
+	
+</body>
+</html>
