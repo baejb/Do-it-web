@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수 호이스팅</title>
+</head>
+<body>
+  <script>		 
+    var x = 10;
+
+		function displayNumber() { 								
+      console.log("x is " + x);
+      console.log("y is " + y);   //y=20이 나올거 같지만 콘솔에서는 y is undefined 라고 뜸     
+      var y = 20; 
+      /*이러한 결과는 변수 호이스팅 때문임.자바스크립트 해석기는 함수 소스를 훑어보면서 var를 사용한 변수를 따로 기억해둠  따라서 
+      var y;
+      console ... 
+      console...
+      var y=20; 이런식으로 윗부분에 기억을 해두기 때문에 var 예약어를 사용한 변수는 선언하기 전에 사용하면 프로그램 오류를 발생시킬 수 있음 
+      */
+		}
+    displayNumber();
+  </script>
+</body>
+</html>
