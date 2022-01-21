@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Variable</title>
+</head>
+<body>
+  <script>
+    function calcSum(n) {
+      let sum = 0;
+      for(let i = 1; i < n + 1; i++) {						
+        sum += i;	
+      }      
+      console.log(sum);
+    }    
+    calcSum(10);   
+    /*let 은 블록범위내에서만 사용 가능하고 재할당은 가능하지만 재선언은 할 수 없음
+    let sum=0;
+    sum=100;  가능
+    let sum=0;
+    let sum=100; 불가능 
+    */ 
+  </script>
+</body>
+</html>
